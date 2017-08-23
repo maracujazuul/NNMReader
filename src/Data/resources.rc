@@ -1,0 +1,10 @@
+#include "resources.h"
+
+APP_ICON		ICON DISCARDABLE	"Images/app.ico"
+TEX_FNT			BITMAP "Images/fonta_mod.bmp"
+TEX_BKG1		BITMAP "Images/ground.bmp"
+TEX_BKG2		BITMAP "Images/ground2.bmp"
+TEX_BKG3		BITMAP "Images/ground3.bmp"
+TEX_ARROW		BITMAP "Images/down.bmp"
+TEX_AUTOSCROLL	BITMAP "Images/autoscroll.bmp"
+APP_SOUND		RCDATA "Sound/dubmood-ninja_starts_school.xm"

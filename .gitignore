@@ -1,0 +1,10 @@
+.svn
+.DS_Store
+*.opensdf
+*.suo
+*.sdf
+*.user
+Debug
+ipch
+Release
+

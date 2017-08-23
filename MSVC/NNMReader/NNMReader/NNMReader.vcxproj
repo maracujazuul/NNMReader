@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{048D3F99-8774-430F-9A53-6D9C494FE463}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>NNMReader</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\lib;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\lib\uFmod;;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>winmm.lib;opengl32.lib;glu32.lib;ufmod.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\lib;C:\Users\IIM\Desktop\notnotme\trunk\NNMReader\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\lib\uFmod;C:\Users\IIM\Desktop\notnotme\trunk\NNMReader\lib\uFmod;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>winmm.lib;opengl32.lib;glu32.lib;ufmod.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\Components\Effects\Flash\Flash.cpp" />
+    <ClCompile Include="..\..\..\src\Components\Font\BitmapFont.cpp" />
+    <ClCompile Include="..\..\..\src\Components\Meshes\Icosahedron.cpp" />
+    <ClCompile Include="..\..\..\src\Components\Meshes\PlaneMesh.cpp" />
+    <ClCompile Include="..\..\..\src\Components\Meshes\RibbonMesh.cpp" />
+    <ClCompile Include="..\..\..\src\Components\Scenes\Scene.cpp" />
+    <ClCompile Include="..\..\..\src\Components\Scenes\SceneIntro\SceneIntro.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Core\GLExtLoader.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Framebuffer\FrameBuffer.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Framebuffer\RenderBuffer.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\GLWindow.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Mesh\Mesh.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Shader\ProgramShader.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Texture\Texture.cpp" />
+    <ClCompile Include="..\..\..\src\main.cpp" />
+    <ClCompile Include="..\..\..\src\NNMReaderFirst.cpp" />
+    <ClCompile Include="..\..\..\src\Utils\Exceptions.cpp" />
+    <ClCompile Include="..\..\..\src\Utils\Timer.cpp" />
+    <ClCompile Include="..\..\..\src\Utils\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\src\Data\resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\Components\Effects\Flash\Flash.h" />
+    <ClInclude Include="..\..\..\src\Components\Font\BitmapFont.h" />
+    <ClInclude Include="..\..\..\src\Components\Meshes\Icosahedron.h" />
+    <ClInclude Include="..\..\..\src\Components\Meshes\PlaneMesh.h" />
+    <ClInclude Include="..\..\..\src\Components\Meshes\RibbonMesh.h" />
+    <ClInclude Include="..\..\..\src\Components\Scenes\Scene.h" />
+    <ClInclude Include="..\..\..\src\Components\Scenes\SceneIntro\SceneIntro.h" />
+    <ClInclude Include="..\..\..\src\Data\resources.h" />
+    <ClInclude Include="..\..\..\src\Engine\Core\BufferARB.h" />
+    <ClInclude Include="..\..\..\src\Engine\Core\Elements.h" />
+    <ClInclude Include="..\..\..\src\Engine\Core\GLExtLoader.h" />
+    <ClInclude Include="..\..\..\src\Engine\Framebuffer\FrameBuffer.h" />
+    <ClInclude Include="..\..\..\src\Engine\Framebuffer\RenderBuffer.h" />
+    <ClInclude Include="..\..\..\src\Engine\GLWindow.h" />
+    <ClInclude Include="..\..\..\src\Engine\Mesh\Mesh.h" />
+    <ClInclude Include="..\..\..\src\Engine\Mesh\Vertex.h" />
+    <ClInclude Include="..\..\..\src\Engine\Shader\ProgramShader.h" />
+    <ClInclude Include="..\..\..\src\Engine\Shader\Shader.h" />
+    <ClInclude Include="..\..\..\src\Engine\Texture\Texture.h" />
+    <ClInclude Include="..\..\..\src\NNMReaderFirst.h" />
+    <ClInclude Include="..\..\..\src\Utils\Exceptions.h" />
+    <ClInclude Include="..\..\..\src\Utils\Timer.h" />
+    <ClInclude Include="..\..\..\src\Utils\Utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
